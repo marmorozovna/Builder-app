@@ -32,6 +32,16 @@ public class User {
         return this.age;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", login='" + login + '\'' +
+                ", password=" + password +
+                ", age=" + age +
+                '}';
+    }
+
     public static Builder newBuilder() {
         return new User().new Builder();
     }
@@ -45,7 +55,7 @@ public class User {
             return this;
         }
 
-        public Builder setLogin(String Login) {
+        public Builder setLogin(String login) {
             User.this.login = login;
             return this;
         }
