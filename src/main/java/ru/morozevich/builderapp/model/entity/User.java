@@ -1,5 +1,7 @@
 package ru.morozevich.builderapp.model.entity;
 
+import java.util.UUID;
+
 public class User {
     private Long id;
     private String login;
@@ -51,7 +53,7 @@ public class User {
         }
 
         public Builder setId(Long id) {
-            User.this.id = id;
+            User.this.id = (long) UUID.randomUUID().hashCode();
             return this;
         }
 
