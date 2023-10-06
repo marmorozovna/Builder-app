@@ -19,7 +19,7 @@ public class UserCreator {
     }
 
     public ArrayList<User> sortUsers(Stream<User> initializedUsers) {
-        return new ArrayList<>(initializedUsers.sorted((o1, o2) -> (o1.getAge() - o2.getAge())).toList());
+        return new ArrayList<>(initializedUsers.sorted((o1, o2) -> (o2.getAge() - o1.getAge())).toList());
     }
 
 }
