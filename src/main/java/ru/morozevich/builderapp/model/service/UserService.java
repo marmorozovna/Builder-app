@@ -3,6 +3,7 @@ package ru.morozevich.builderapp.model.service;
 import ru.morozevich.builderapp.model.entity.User;
 
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.Random;
 import java.util.stream.Stream;
 
@@ -25,5 +26,9 @@ public class UserService {
     public Stream<User> getUsersEvenId(Stream<User> sortedUsers) {
         Stream<User> userEvenId = sortedUsers;
         return userEvenId.filter(user -> user.getId() % 2 == 0);
+    }
+
+    public Optional <User> getAnyUserIdEqualsAge (Stream <User> evenIdUser){
+        return evenIdUser.filter(user -> user.getAge()==user.getId()).findAny();
     }
 }

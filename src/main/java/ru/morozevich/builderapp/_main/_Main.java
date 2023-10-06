@@ -4,6 +4,7 @@ import ru.morozevich.builderapp.controller.UserController;
 import ru.morozevich.builderapp.model.entity.User;
 
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 public class _Main {
@@ -19,6 +20,8 @@ public class _Main {
         userController.printUserList(sortedUser);
         Stream<User> sortedUserStream = sortedUser.stream();
         Stream<User> evenIdUsers = userController.getUsersEvenId(sortedUserStream);
-        userController.printEvenIdUsers(evenIdUsers);
+//        userController.printEvenIdUsers(evenIdUsers);
+        Optional <User> evenIdUser = userController.getAnyUserIdEqualsAge(evenIdUsers);
+        userController.printOptUser(evenIdUser);
     }
 }

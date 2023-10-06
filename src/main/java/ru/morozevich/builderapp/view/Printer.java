@@ -3,6 +3,7 @@ package ru.morozevich.builderapp.view;
 import ru.morozevich.builderapp.model.entity.User;
 
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 public class Printer {
@@ -14,8 +15,14 @@ public class Printer {
         }
     }
 
-    public void printEvenIDUsers (Stream<User> usersEvenID){
+    public void printEvenIDUsers(Stream<User> usersEvenID) {
         System.out.println("Пользователи с четными Id");
         usersEvenID.forEach(System.out::println);
+    }
+
+    public void printOptUser(Optional<User> optUser) throws RuntimeException {
+        if (optUser.isPresent()) {
+            System.out.println("Найдено совпадение ID и возраста:" + optUser.get());
+        } else throw new RuntimeException("Нет совпадения ID и возраста");
     }
 }

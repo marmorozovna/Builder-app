@@ -5,6 +5,7 @@ import ru.morozevich.builderapp.model.service.UserService;
 import ru.morozevich.builderapp.view.Printer;
 
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 public class UserController {
@@ -23,12 +24,20 @@ public class UserController {
         printer.printSortedUsers(sortedUsers);
     }
 
-    public Stream <User> getUsersEvenId (Stream <User> sortedUsers) {
+    public Stream<User> getUsersEvenId(Stream<User> sortedUsers) {
         return userService.getUsersEvenId(sortedUsers);
     }
 
-    public void printEvenIdUsers(Stream<User> evenIdUsers){
+    public void printEvenIdUsers(Stream<User> evenIdUsers) {
         printer.printEvenIDUsers(evenIdUsers);
+    }
+
+    public Optional<User> getAnyUserIdEqualsAge(Stream<User> evenIdUsers) {
+        return userService.getAnyUserIdEqualsAge(evenIdUsers);
+    }
+
+    public void printOptUser(Optional<User> optUser) throws RuntimeException {
+        printer.printOptUser(optUser);
     }
 }
 
