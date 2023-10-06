@@ -36,7 +36,7 @@ public class UserController {
         return userService.getAnyUserIdEqualsAge(evenIdUsersPrinted);
     }
 
-    public void printOptUser(Optional<User> optUser) throws RuntimeException {
+    public void printOptUser(Optional<User> optUser) {
         printer.printOptUser(optUser);
     }
 }
