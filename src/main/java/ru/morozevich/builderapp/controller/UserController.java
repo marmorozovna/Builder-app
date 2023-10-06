@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 public class UserController {
     UserCreator userCreator = new UserCreator();
 
-    public void createListUser(Stream<User> stream) {
-        userCreator.createListUser(stream);
+    public Stream <User> initializeUsers(Stream<User> stream) {
+        return userCreator.initializeUsers(stream);
     }
 }

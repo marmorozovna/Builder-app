@@ -14,6 +14,6 @@ public class _Main {
         }
         Stream<User> streamUserList = userList.stream();
         UserController userController = new UserController();
-        userController.createListUser(streamUserList);
+        Stream <User> initializedUser = userController.initializeUsers(streamUserList);
     }
 }

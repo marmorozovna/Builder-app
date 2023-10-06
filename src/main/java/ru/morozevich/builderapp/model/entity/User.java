@@ -52,7 +52,7 @@ public class User {
         private Builder() {
         }
 
-        public Builder setId(Long id) {
+        public Builder setId() {
             User.this.id = (long) UUID.randomUUID().hashCode();
             return this;
         }
