@@ -2,11 +2,11 @@ package ru.morozevich.builderapp.model.service;
 
 import ru.morozevich.builderapp.model.entity.User;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.stream.Stream;
 
 public class UserCreator {
-//    UserController userController = new UserController();
 
     public Stream<User> initializeUsers(Stream<User> streamUserList) {
         Random random = new Random();
@@ -17,4 +17,9 @@ public class UserCreator {
                 .setLogin(String.valueOf(random.nextInt(30, 122)))
                 .build());
     }
+
+    public ArrayList<User> sortUsers(Stream<User> initializedUsers) {
+        return new ArrayList<>(initializedUsers.sorted((o1, o2) -> (o1.getAge() - o2.getAge())).toList());
+    }
+
 }
