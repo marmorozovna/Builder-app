@@ -21,7 +21,7 @@ public class _Main {
         Stream<User> sortedUserStream = sortedUser.stream();
         Stream<User> evenIdUsers = userController.getUsersEvenId(sortedUserStream);
         Stream<User> evenIdUsersPrinted = userController.printEvenIdUsers(evenIdUsers);
-        Optional <User> evenIdUser = userController.getAnyUserIdEqualsAge(evenIdUsersPrinted);
+        Optional<User> evenIdUser = userController.getAnyUserIdEqualsAge(evenIdUsersPrinted);
         userController.printOptUser(evenIdUser);
     }
 }

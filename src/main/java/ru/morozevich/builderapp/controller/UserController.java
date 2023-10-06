@@ -28,8 +28,8 @@ public class UserController {
         return userService.getUsersEvenId(sortedUsers);
     }
 
-    public Stream <User> printEvenIdUsers(Stream<User> evenIdUsers) {
-       return printer.printEvenIDUsers(evenIdUsers);
+    public Stream<User> printEvenIdUsers(Stream<User> evenIdUsers) {
+        return printer.printEvenIDUsers(evenIdUsers);
     }
 
     public Optional<User> getAnyUserIdEqualsAge(Stream<User> evenIdUsersPrinted) {
