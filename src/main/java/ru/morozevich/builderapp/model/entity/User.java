@@ -8,6 +8,8 @@ public class User {
     private StringBuilder password;
     private int age;
 
+    private static long COUNT_ID;
+
     public User() {
     }
 
@@ -53,7 +55,8 @@ public class User {
         }
 
         public Builder setId() {
-            User.this.id = (long) UUID.randomUUID().hashCode();
+            User.this.id = COUNT_ID;
+            COUNT_ID++;
             return this;
         }
 
