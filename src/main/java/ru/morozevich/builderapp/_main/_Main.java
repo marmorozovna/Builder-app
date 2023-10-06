@@ -18,6 +18,7 @@ public class _Main {
         ArrayList<User> sortedUser = userController.sortUsers(initializedUser);
         userController.printUserList(sortedUser);
         Stream<User> sortedUserStream = sortedUser.stream();
-        userController.getUsersEvenId(sortedUserStream);
+        Stream<User> evenIdUsers = userController.getUsersEvenId(sortedUserStream);
+        userController.printEvenIdUsers(evenIdUsers);
     }
 }

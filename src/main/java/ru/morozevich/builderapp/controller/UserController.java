@@ -26,4 +26,9 @@ public class UserController {
     public Stream <User> getUsersEvenId (Stream <User> sortedUsers) {
         return userService.getUsersEvenId(sortedUsers);
     }
+
+    public void printEvenIdUsers(Stream<User> evenIdUsers){
+        printer.printEvenIDUsers(evenIdUsers);
+    }
 }
+
