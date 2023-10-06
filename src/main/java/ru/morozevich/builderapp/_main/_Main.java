@@ -14,7 +14,8 @@ public class _Main {
         }
         Stream<User> streamUserList = userList.stream();
         UserController userController = new UserController();
-        Stream <User> initializedUser = userController.initializeUsers(streamUserList);
-        ArrayList <User> sortedUSer = userController.sortUsers(initializedUser);
+        Stream<User> initializedUser = userController.initializeUsers(streamUserList);
+        ArrayList<User> sortedUSer = userController.sortUsers(initializedUser);
+        userController.printUserList(sortedUSer);
     }
 }
