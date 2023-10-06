@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.stream.Stream;
 
-public class UserCreator {
+public class UserService {
 
     public Stream<User> initializeUsers(Stream<User> streamUserList) {
         Random random = new Random();
@@ -22,4 +22,8 @@ public class UserCreator {
         return new ArrayList<>(initializedUsers.sorted((o1, o2) -> (o2.getAge() - o1.getAge())).toList());
     }
 
+    public Stream<User> getUsersEvenId(Stream<User> sortedUsers) {
+        Stream <User> userEvenId = sortedUsers;
+        return userEvenId.filter(user -> user.getId() % 2 == 0);
+    }
 }
