@@ -15,9 +15,9 @@ public class Printer {
         }
     }
 
-    public void printEvenIDUsers(Stream<User> usersEvenID) {
+    public Stream <User> printEvenIDUsers(Stream<User> usersEvenID) {
         System.out.println("Пользователи с четными Id");
-        usersEvenID.forEach(System.out::println);
+        return usersEvenID.peek(System.out::println);
     }
 
     public void printOptUser(Optional<User> optUser) throws RuntimeException {

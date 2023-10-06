@@ -28,12 +28,12 @@ public class UserController {
         return userService.getUsersEvenId(sortedUsers);
     }
 
-    public void printEvenIdUsers(Stream<User> evenIdUsers) {
-        printer.printEvenIDUsers(evenIdUsers);
+    public Stream <User> printEvenIdUsers(Stream<User> evenIdUsers) {
+       return printer.printEvenIDUsers(evenIdUsers);
     }
 
-    public Optional<User> getAnyUserIdEqualsAge(Stream<User> evenIdUsers) {
-        return userService.getAnyUserIdEqualsAge(evenIdUsers);
+    public Optional<User> getAnyUserIdEqualsAge(Stream<User> evenIdUsersPrinted) {
+        return userService.getAnyUserIdEqualsAge(evenIdUsersPrinted);
     }
 
     public void printOptUser(Optional<User> optUser) throws RuntimeException {

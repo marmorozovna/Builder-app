@@ -20,8 +20,8 @@ public class _Main {
         userController.printUserList(sortedUser);
         Stream<User> sortedUserStream = sortedUser.stream();
         Stream<User> evenIdUsers = userController.getUsersEvenId(sortedUserStream);
-//        userController.printEvenIdUsers(evenIdUsers);
-        Optional <User> evenIdUser = userController.getAnyUserIdEqualsAge(evenIdUsers);
+        Stream<User> evenIdUsersPrinted = userController.printEvenIdUsers(evenIdUsers);
+        Optional <User> evenIdUser = userController.getAnyUserIdEqualsAge(evenIdUsersPrinted);
         userController.printOptUser(evenIdUser);
     }
 }

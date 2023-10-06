@@ -24,8 +24,7 @@ public class UserService {
     }
 
     public Stream<User> getUsersEvenId(Stream<User> sortedUsers) {
-        Stream<User> userEvenId = sortedUsers;
-        return userEvenId.filter(user -> user.getId() % 2 == 0);
+        return sortedUsers.filter(user -> user.getId() % 2 == 0);
     }
 
     public Optional <User> getAnyUserIdEqualsAge (Stream <User> evenIdUser){
