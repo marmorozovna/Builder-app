@@ -23,11 +23,11 @@ public class UserController {
         printer.printSortedUsers(sortedUsers);
     }
 
-    public Stream<User> getUsersEvenId(Stream<User> sortedUsers) {
+    public Stream <User> getUsersEvenId (Stream <User> sortedUsers) {
         return userService.getUsersEvenId(sortedUsers);
     }
 
-    public void printEvenIdUsers(Stream<User> evenIdUsers) {
+    public void printEvenIdUsers(Stream<User> evenIdUsers){
         printer.printEvenIDUsers(evenIdUsers);
     }
 }

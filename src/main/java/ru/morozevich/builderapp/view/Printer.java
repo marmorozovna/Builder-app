@@ -14,7 +14,7 @@ public class Printer {
         }
     }
 
-    public void printEvenIDUsers(Stream<User> usersEvenID) {
+    public void printEvenIDUsers (Stream<User> usersEvenID){
         System.out.println("Пользователи с четными Id");
         usersEvenID.forEach(System.out::println);
     }
