@@ -1,14 +1,12 @@
 package ru.morozevich.builderapp.model.entity;
 
-import java.util.UUID;
-
 public class User {
     private Long id;
     private String login;
     private StringBuilder password;
     private int age;
 
-    private static long COUNT_ID;
+    private static long countID;
 
     public User() {
     }
@@ -40,7 +38,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", login='" + login + '\'' +
+                ", login=" + login +
                 ", password=" + password +
                 ", age=" + age +
                 '}';
@@ -55,8 +53,8 @@ public class User {
         }
 
         public Builder setId() {
-            User.this.id = COUNT_ID;
-            COUNT_ID++;
+            User.this.id = countID;
+            countID++;
             return this;
         }
 
