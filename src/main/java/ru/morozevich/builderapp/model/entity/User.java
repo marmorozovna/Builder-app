@@ -53,8 +53,8 @@ public class User {
         }
 
         public Builder setId() {
-            User.this.id = countID;
             countID++;
+            User.this.id = countID;
             return this;
         }
 
